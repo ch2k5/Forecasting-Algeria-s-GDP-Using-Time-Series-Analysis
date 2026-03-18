@@ -2,7 +2,7 @@
 library(readr)    # for reading CSV
 
 # Load CSV
-df <- read_csv("~/Documents/chakib/Ensia/3rd_Year/semester 2/TIme series and classification/individual project/algeria-gdp.csv", show_col_types = FALSE)
+df <- read_csv("algeria-gdp.csv", show_col_types = FALSE)
 
 # Check column names
 colnames(df)
