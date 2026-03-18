@@ -1,0 +1,22 @@
+```{r}
+library(readr)    # for reading CSV
+
+# Load CSV
+df <- read_csv("~/Documents/chakib/Ensia/3rd_Year/semester 2/TIme series and classification/individual project/algeria-gdp.csv", show_col_types = FALSE)
+
+# Check column names
+colnames(df)
+# Should print: "Gdp" "Year"
+
+# Convert to time series (use correct column name)
+df_ts <- ts(df$Gdp, start = min(as.numeric(format(df$Year, "%Y"))), frequency = 1)  
+
+# Plot time series
+plot(df_ts, 
+     main = "Algeria GDP Time Series", 
+     xlab = "Year", 
+     ylab = "GDP (USD)", 
+     col = "blue", 
+     lwd = 2)
+```
+
